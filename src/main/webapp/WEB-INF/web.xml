@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <!-- Session configuration -->
+    <session-config>
+        <session-timeout>
+            30 <!-- Time in minutes to expire after the last request -->
+        </session-timeout>        
+        <cookie-config>
+                <http-only>true</http-only> <!-- Prevent client side scripting from accessing/manipulating session cookie. -->
+                <secure>false</secure> <!-- true to force send over TLS connection -->
+        </cookie-config>
+        <tracking-mode>COOKIE</tracking-mode> <!-- This disables URL rewriting. -->
+    </session-config>
+
+    <!-- Creation of Datasource in Application Server -->
+    <data-source>
+        <name>java:global/jdbc/gestClub</name>
+        <class-name>org.h2.jdbcx.JdbcDataSource</class-name>
+        <url>jdbc:h2:~/h2db/dawclub;AUTO_SERVER=TRUE</url>
+<!--         <url>jdbc:h2:mem:dawclub;DB_CLOSE_DELAY=-1</url> -->
+        <user>dawuser</user>
+        <password>dawuser</password> 
+        <initial-pool-size>2</initial-pool-size>
+        <max-pool-size>10</max-pool-size>
+        <min-pool-size>5</min-pool-size>
+    </data-source>
+
+</web-app>
