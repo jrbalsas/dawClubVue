@@ -13,14 +13,14 @@
                                   v-model="cliente.nombre" required class="form-control"
                                   :class="{'is-invalid': errorMsgs.nombre}"/>
     <p id="errNombre" class="text-danger" v-if='errorMsgs.nombre'>
-      El nombre es obligatorio
+      El nombre es obligatorio <!--Ejemplo de mensaje fijo opcional en vista-->
     </p>
 
     <label>DNI: </label><input name="Dni"
                                v-model="cliente.dni" class="form-control"
                                :class="{ 'is-invalid': errorMsgs.dni}"/>
     <p id="errDni" class="text-danger" v-if='errorMsgs.dni'>
-      El DNI no es de la forma 12345678-A
+      {{errorMsgs.dni}} <!-- Ejemplo de mensaje de error opcional generado en método de validación-->
     </p>
     <div class="form-group form-check mt-2">
       <input type="checkbox" id="ibSocio" class="form-check-input"
@@ -92,7 +92,7 @@ export default {
       if (this.cliente.nombre.length < 3)
         this.errorMsgs.nombre = "La longitud del nombre no es correcta (>=3)";
       if (/^\d{7,8}-?[A-Z]$/i.test(this.cliente.dni) === false)
-        this.errorMsgs.dni = "No es un nif válido";
+        this.errorMsgs.dni = "El DNI no es de la forma 12345678-A";
 
       if (Object.keys(this.errorMsgs).length > 0) {
         console.log("Errores de validación en cliente")
