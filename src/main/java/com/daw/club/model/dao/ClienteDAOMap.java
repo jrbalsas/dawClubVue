@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import javax.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped      //Elegible for Dependency Injection
 @DAOMap
@@ -52,7 +52,7 @@ public class ClienteDAOMap implements ClienteDAO, Serializable{
         boolean result=false;
         if (clientes.containsKey(c.getId())) {
             Cliente nc=new Cliente(c);
-            clientes.replace(c.getId(),c);
+            clientes.replace(c.getId(),nc);
             result=true;
         }       
         return result;
