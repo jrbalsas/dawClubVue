@@ -1,5 +1,5 @@
 <template>
-  <footer class="card text-right well bg-light">
+  <footer class="card text-right bg-light">
     <div class="card-body">
       <p class="card-text text-end">
             <span v-if="!text">

@@ -5,9 +5,9 @@ export class ClientesDAOfetch {
 
     /** Configure DAO with REST api URL
      * @pre requires CORS enabled on REST API
-     * @param url REST api URL*/
-    constructor(url) {
-        this.srvUrl = url;
+     * @param apiurl REST api URL*/
+    constructor(apiurl) {
+        this.srvUrl = apiurl;
         this.respuestaValida=false; //status of last ajax request
     }
     buscaTodos() {

@@ -1,5 +1,5 @@
 <template>
-  <header class="page-header">
+  <header class="p-5 bg-light rounded-3">
     <h1>
       <a href="index_old.html"><img src="/images/logo.png"></a>
       {{ text }}
