@@ -41,7 +41,7 @@ import {ClientesDAOfetch, ClientesDAOList} from "./services/clientes.services.js
 
 //Init DAO (select one DAO implementation)
 //const clientesDAO = new ClientesDAOList(); //For local testing (no REST API)
-const clientesDAO = new ClientesDAOfetch('http://localhost:8080/club/webservice/clientes'); //For REST API access
+const clientesDAO = new ClientesDAOfetch('http://localhost:8080/club/api/clientes'); //For REST API access
 
 export default {
 
