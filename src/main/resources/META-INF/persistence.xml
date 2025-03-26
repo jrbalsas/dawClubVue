@@ -4,20 +4,11 @@
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
              version="3.0">
         <persistence-unit name="ClubPU" transaction-type="JTA">
-<!-- Select JPA implementation if needed-->
-<!--        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>-->
-<!--        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>-->
-        <!-- Use JNDI Datasource (e.g. JEE connection pool in web.xml) 
-             Uncomment below if Datasource connection is working -->
+        <!-- Use JNDI Datasource (e.g. JEE connection pool in web.xml) -->
         <jta-data-source>java:global/jdbc/gestClub</jta-data-source>
         <properties>
             <!-- JPA table creation and populate for managed entities on starting app  -->
-            <!--            <property name="jakarta.persistence.schema-generation.database.action" value="create"/>-->
             <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
-            <property name="jakarta.persistence.sql-load-script-source" value="/META-INF/sql/sampledata.sql"/>
-            <!-- Specific db operations, e.g. create tables not managed by JPA -->
-            <property name="jakarta.persistence.schema-generation.create-source" value="metadata-then-script"/>
-            <property name="jakarta.persistence.schema-generation.create-script-source" value="/META-INF/sql/schema.sql"/>
 
             <!-- EclipseLink specific properties e.g. debug level -->
             <property name="eclipselink.logging.level" value="INFO"/>

@@ -1,8 +1,9 @@
 package com.daw.club.model.dao;
 
 import com.daw.club.model.Cliente;
-import com.daw.club.model.Cliente;
 import com.daw.club.model.dao.qualifiers.DAOMap;
+import jakarta.enterprise.context.ApplicationScoped;
+
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
@@ -14,15 +15,11 @@ import jakarta.enterprise.context.ApplicationScoped;
 @DAOMap
 public class ClienteDAOMap implements ClienteDAO, Serializable{
 
-    private  Map<Integer, Cliente> clientes=null;
+    private  Map<Integer, Cliente> clientes;
     private  Integer idCliente = 1;
 
     public ClienteDAOMap() {
         clientes = new HashMap<>();
-
-        clientes.put(idCliente, new Cliente(idCliente++, "Paco López", "11111111A", false));
-        clientes.put(idCliente, new Cliente(idCliente++, "María Jiménez", "22222222B", true));
-        clientes.put(idCliente, new Cliente(idCliente++, "Carlos García", "33333333C", true));
     }
     
     @Override
