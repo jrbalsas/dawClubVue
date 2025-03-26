@@ -18,8 +18,8 @@ Sample Maven project with classic CRUD Web App using VueJS front-end & JakartaEE
 ## Usage:
  - Select Clientes DAO implementation in Back-end JAX-RS Service: ClientDAOJPA or ClientesDAOMap
  - Select Clientes DAO implementation in Front-end VueJS AppClientes module: ClientesDAOfetch or ClientesDAOList
- - Package and deploy back-end in a JEE8 Application Server, e.g. Payara/Glassfish
- - Resolve dependencies and launch Vue front-end from ``src/main/front-end`` folder and access in url ``http://localhost:3000``
+ - Package and deploy back-end in a Jakarta 10 Application Server, e.g. Payara/Glassfish
+ - Resolve dependencies and launch Vue front-end from ``src/main/front-end`` folder and access in url ``http://localhost:5173``
 ```
  $ npm install
  $ npm run dev 
