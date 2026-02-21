@@ -24,3 +24,4 @@ Sample Maven project with classic CRUD Web App using VueJS front-end & JakartaEE
  $ npm install
  $ npm run dev 
  ```
+ - Explore REST API using integrated Swagger UI at `http://localhost:8080/club/webjars/swagger-ui/5.31.2`. In Payara use `/openapi` url for access Openapi documentation.
